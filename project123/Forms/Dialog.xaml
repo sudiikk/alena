@@ -1,0 +1,35 @@
+﻿<Window x:Class="project123.Forms.Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project123.Forms"
+        mc:Ignorable="d"
+        Title="Dialog" Height="450" Width="800">
+    <Grid Background="#FF6677">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="381*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,72,0,72" Height="300"  Width="371" Grid.Column="1" Background="#FF6433">
+            <TextBlock Text="Имя товара:" TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            <TextBox Text="{Binding Name}"  TextWrapping="Wrap" Margin="5"  Width="260" Height="30"/>
+            <TextBlock Text="Описание товара: " TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            <TextBox Text="{Binding Description}"  TextWrapping="Wrap"  Width="260" Margin="5" Height="30"/>
+            <TextBlock Text="Цена товара:" TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            <TextBox Text="{Binding Price}"  TextWrapping="Wrap"  Width="260" Margin="5" Height="30"/>
+            <TextBlock Text="Уникальный идентификатор" TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            <TextBox Text="{Binding ID}" Name="tb_id" IsReadOnly="True"  TextWrapping="Wrap"  Width="260" Margin="5" Height="30"/>
+            <StackPanel Orientation="Horizontal" Width="295">
+                <Button x:Name="btn_add"  Click="btn_add_Click"  Content="Добавить" HorizontalAlignment="Left"  Margin="10" Height="40" Width="275" FontWeight="Bold"/>
+
+            </StackPanel>
+        </StackPanel>
+
+
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="820,415,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
